@@ -7,179 +7,231 @@
   <meta name="description" content="Marion's highest-rated plumber. 4.8 stars, lowest prices on the South Coast, same-day service. Call Gibbs at (508) 748-2445.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy:   #0d2b5e;
-      --navy-2: #163470;
-      --red:    #c0392b;
-      --red-h:  #a93226;
-      --green:  #16a34a;
-      --white:  #ffffff;
-      --off:    #f4f6f9;
-      --gray:   #6b7280;
-      --gray-d: #374151;
-      --border: #e5e7eb;
-      --font:   'Inter', -apple-system, sans-serif;
-      --max-w:  1140px;
-      --shadow: 0 2px 16px rgba(0,0,0,0.08);
+      --navy:    #1b3d6e;
+      --navy-2:  #1a3560;
+      --navy-d:  #122a4e;
+      --gold:    #b8965a;
+      --gold-2:  #a07d42;
+      --gold-lt: #f0e8d8;
+      --cream:   #f8f5ef;
+      --mist:    #edf1f6;
+      --red:     #b83232;
+      --red-h:   #9e2b2b;
+      --green:   #2a7d4f;
+      --white:   #ffffff;
+      --gray:    #6b7280;
+      --gray-d:  #374151;
+      --border:  #dde2ea;
+      --font:    'Inter', -apple-system, sans-serif;
+      --serif:   'Playfair Display', Georgia, serif;
+      --max-w:   1140px;
+      --shadow:  0 2px 20px rgba(27,61,110,0.10);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--white); color: var(--gray-d); font-family: var(--font); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    body { background: var(--cream); color: var(--gray-d); font-family: var(--font); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     a { color: inherit; text-decoration: none; }
     .container { max-width: var(--max-w); margin-inline: auto; padding-inline: 24px; }
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; border-radius: 6px; font-weight: 700; font-size: 0.95rem; transition: all 0.2s; cursor: pointer; border: none; font-family: var(--font); }
-    .btn-red { background: var(--red); color: #fff; }
-    .btn-red:hover { background: var(--red-h); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(192,57,43,0.3); }
+    .btn-gold { background: var(--gold); color: #fff; }
+    .btn-gold:hover { background: var(--gold-2); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(184,150,90,0.35); }
     .btn-navy { background: var(--navy); color: #fff; }
     .btn-navy:hover { background: var(--navy-2); }
-    .btn-outline-w { border: 2px solid rgba(255,255,255,0.45); color: #fff; background: transparent; }
+    .btn-red { background: var(--red); color: #fff; }
+    .btn-red:hover { background: var(--red-h); transform: translateY(-1px); }
+    .btn-outline-w { border: 2px solid rgba(255,255,255,0.4); color: #fff; background: transparent; }
     .btn-outline-w:hover { background: rgba(255,255,255,0.1); }
-    .btn-white { background: #fff; color: var(--red); }
-    .btn-white:hover { background: #f9f9f9; }
+    .btn-white { background: #fff; color: var(--navy); }
+    .btn-white:hover { background: var(--cream); }
 
     /* TOP BAR */
-    .topbar { background: var(--navy); color: rgba(255,255,255,0.8); font-size: 0.82rem; padding: 9px 0; }
+    .topbar { background: var(--navy-d); color: rgba(255,255,255,0.75); font-size: 0.82rem; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
     .topbar-item { display: flex; align-items: center; gap: 6px; }
-    .topbar-item strong { color: #fff; }
+    .topbar-item strong { color: var(--gold); }
 
     /* HEADER */
-    .header { background: #fff; border-bottom: 3px solid var(--red); position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow); }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 16px; gap: 24px; }
-    .logo-name { font-size: 1.55rem; font-weight: 900; color: var(--navy); line-height: 1; letter-spacing: -0.02em; }
-    .logo-name span { color: var(--red); }
-    .logo-sub { font-size: 0.74rem; font-weight: 500; color: var(--gray); letter-spacing: 0.04em; text-transform: uppercase; margin-top: 3px; }
+    .header { background: var(--cream); border-bottom: 3px solid var(--gold); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(27,61,110,0.12); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 15px; gap: 24px; }
+    .logo-mark { display: flex; align-items: center; gap: 12px; }
+    .logo-anchor { font-size: 2rem; line-height: 1; }
+    .logo-name { font-family: var(--serif); font-size: 1.45rem; font-weight: 900; color: var(--navy); line-height: 1.1; }
+    .logo-name span { color: var(--gold); }
+    .logo-sub { font-size: 0.72rem; font-weight: 600; color: var(--gray); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 3px; }
     .header-nav { display: flex; gap: 28px; list-style: none; }
-    .header-nav a { font-size: 0.88rem; font-weight: 600; color: var(--gray-d); transition: color 0.2s; }
+    .header-nav a { font-size: 0.87rem; font-weight: 600; color: var(--gray-d); transition: color 0.2s; }
     .header-nav a:hover { color: var(--navy); }
     .header-phone-label { font-size: 0.7rem; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; text-align: right; }
-    .header-phone-num { font-size: 1.5rem; font-weight: 900; color: var(--red); line-height: 1; }
-    .rating-pill { display: inline-flex; align-items: center; gap: 6px; background: #fef3c7; border: 1px solid #f59e0b; color: #92400e; font-size: 0.78rem; font-weight: 800; padding: 3px 10px; border-radius: 100px; margin-top: 4px; }
-    @media (max-width: 768px) { .header-nav { display: none; } .header-phone-num { font-size: 1.2rem; } }
+    .header-phone-num { font-size: 1.45rem; font-weight: 900; color: var(--red); line-height: 1; }
+    .rating-pill { display: inline-flex; align-items: center; gap: 5px; background: var(--gold-lt); border: 1px solid var(--gold); color: var(--navy-d); font-size: 0.75rem; font-weight: 800; padding: 3px 10px; border-radius: 100px; margin-top: 4px; }
+    @media (max-width: 768px) { .header-nav { display: none; } .header-phone-num { font-size: 1.15rem; } }
 
     /* HERO */
-    .hero { background: linear-gradient(135deg, var(--navy) 0%, #163a7a 100%); color: #fff; padding-block: clamp(64px, 10vw, 100px); position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; right: -80px; top: -80px; width: 500px; height: 500px; background: rgba(255,255,255,0.03); border-radius: 50%; }
+    .hero {
+      background: var(--navy-d);
+      color: #fff;
+      padding-block: clamp(64px, 10vw, 100px);
+      position: relative;
+      overflow: hidden;
+    }
+    /* wave rope pattern overlay */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 18px,
+          rgba(184,150,90,0.04) 18px,
+          rgba(184,150,90,0.04) 19px
+        );
+      pointer-events: none;
+    }
     .hero-grid { display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; position: relative; z-index: 1; }
     @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
-    .hero-stars { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
-    .hero-stars-val { color: #fbbf24; font-size: 1.3rem; letter-spacing: 1px; }
-    .hero-stars-text { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
-    .hero-headline { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.02em; }
-    .hero-headline span { color: #fbbf24; }
-    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 36px; max-width: 520px; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .hero-tag { background: rgba(184,150,90,0.2); border: 1px solid rgba(184,150,90,0.4); color: var(--gold); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; }
+    .hero-stars-val { color: #f5c842; font-size: 1.1rem; letter-spacing: 2px; }
+    .hero-stars-text { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+    .hero-headline { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero-headline em { font-style: normal; color: var(--gold); }
+    .hero-sub { font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.8; margin-bottom: 36px; max-width: 520px; }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
-    .hero-trust { display: flex; flex-wrap: wrap; gap: 20px; }
-    .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.75); font-weight: 500; }
-    .trust-dot { width: 18px; height: 18px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #fff; font-weight: 900; flex-shrink: 0; }
+    .hero-trust { display: flex; flex-wrap: wrap; gap: 18px; }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.72); font-weight: 500; }
+    .trust-dot { width: 18px; height: 18px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #fff; font-weight: 900; flex-shrink: 0; }
 
     /* HERO CARD */
-    .hero-card { background: #fff; border-radius: 12px; padding: 36px; color: var(--gray-d); box-shadow: 0 24px 64px rgba(0,0,0,0.28); }
-    .hero-card-title { font-size: 1.2rem; font-weight: 900; color: var(--navy); margin-bottom: 4px; }
-    .hero-card-sub { font-size: 0.83rem; color: var(--gray); margin-bottom: 22px; }
+    .hero-card { background: var(--cream); border-radius: 12px; padding: 36px; color: var(--gray-d); box-shadow: 0 24px 64px rgba(0,0,0,0.32), 0 0 0 1px rgba(184,150,90,0.15); }
+    .hero-card-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 900; color: var(--navy); margin-bottom: 4px; }
+    .hero-card-sub { font-size: 0.82rem; color: var(--gray); margin-bottom: 22px; }
     .form-row { margin-bottom: 14px; }
     .form-row label { display: block; font-size: 0.74rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
-    .form-row input, .form-row select, .form-row textarea { width: 100%; border: 2px solid var(--border); border-radius: 6px; padding: 11px 14px; font-family: var(--font); font-size: 0.92rem; color: var(--gray-d); outline: none; transition: border-color 0.2s; }
+    .form-row input, .form-row select, .form-row textarea { width: 100%; border: 2px solid var(--border); border-radius: 6px; padding: 11px 14px; font-family: var(--font); font-size: 0.92rem; color: var(--gray-d); background: #fff; outline: none; transition: border-color 0.2s; }
     .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--navy); }
     .form-row textarea { height: 86px; resize: vertical; }
     .form-note { font-size: 0.73rem; color: var(--gray); text-align: center; margin-top: 10px; }
 
+    /* WAVE DIVIDERS */
+    .wave-down { display: block; width: 100%; line-height: 0; }
+    .wave-down svg { display: block; width: 100%; }
+    .wave-up { display: block; width: 100%; line-height: 0; }
+    .wave-up svg { display: block; width: 100%; }
+
     /* PRICE PROMISE */
-    .price-promise { background: var(--green); color: #fff; padding: 20px 0; text-align: center; }
-    .price-promise-inner { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; font-weight: 700; font-size: 0.95rem; }
-    .price-promise-inner span { opacity: 0.85; font-weight: 400; }
+    .price-promise { background: var(--gold); color: #fff; padding: 18px 0; text-align: center; }
+    .price-promise-inner { display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap; font-weight: 700; font-size: 0.95rem; }
+    .price-promise-inner span { opacity: 0.88; font-weight: 400; }
 
     /* BADGES */
-    .badges { background: var(--off); border-bottom: 1px solid var(--border); padding: 22px 0; }
-    .badges-inner { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; }
+    .badges { background: var(--cream); border-bottom: 1px solid var(--border); padding: 28px 0; }
+    .badges-inner { display: flex; justify-content: center; flex-wrap: wrap; gap: 48px; }
     .badge { display: flex; align-items: center; gap: 10px; }
     .badge-icon { font-size: 1.6rem; }
     .badge-text { font-size: 0.82rem; font-weight: 700; color: var(--navy); line-height: 1.3; }
     .badge-text span { display: block; font-weight: 400; color: var(--gray); font-size: 0.75rem; }
 
     /* SECTIONS */
-    .section-py { padding-block: clamp(64px, 8vw, 100px); }
-    .section-tag { display: inline-block; background: rgba(13,43,94,0.08); color: var(--navy); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 4px; margin-bottom: 14px; }
-    .section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--navy); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 16px; }
-    .section-title span { color: var(--red); }
-    .section-body { color: var(--gray); font-size: 1rem; line-height: 1.75; max-width: 540px; }
+    .section-py { padding-block: clamp(64px, 8vw, 96px); }
+    .section-tag { display: inline-flex; align-items: center; gap: 8px; color: var(--gold-2); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
+    .section-tag::before { content: ''; display: block; width: 28px; height: 2px; background: var(--gold); border-radius: 2px; }
+    .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--navy); line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 16px; }
+    .section-title em { font-style: normal; color: var(--gold); }
+    .section-body { color: var(--gray); font-size: 1rem; line-height: 1.8; max-width: 540px; }
 
     /* SERVICES */
+    .services-bg { background: var(--white); }
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
     @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
-    .service-card { border: 2px solid var(--border); border-radius: 10px; padding: 28px; transition: all 0.25s; }
-    .service-card:hover { border-color: var(--navy); box-shadow: 0 8px 28px rgba(13,43,94,0.1); transform: translateY(-3px); }
+    .service-card { background: var(--cream); border: 2px solid var(--border); border-radius: 10px; padding: 30px 26px; transition: all 0.25s; }
+    .service-card:hover { border-color: var(--gold); box-shadow: 0 8px 28px rgba(184,150,90,0.15); transform: translateY(-3px); }
     .service-icon { font-size: 2.2rem; margin-bottom: 16px; }
-    .service-name { font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+    .service-name { font-weight: 800; font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
     .service-desc { font-size: 0.875rem; color: var(--gray); line-height: 1.65; }
 
     /* WHY US */
-    .why { background: var(--off); }
+    .why-bg { background: var(--navy); }
     .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
     @media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .why-intro .section-title { color: #fff; }
+    .why-intro .section-body { color: rgba(255,255,255,0.7); }
     .why-cards { display: flex; flex-direction: column; gap: 16px; }
-    .why-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; display: flex; align-items: flex-start; gap: 16px; }
+    .why-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(184,150,90,0.2); border-radius: 10px; padding: 22px 24px; display: flex; align-items: flex-start; gap: 16px; transition: background 0.2s; }
+    .why-card:hover { background: rgba(255,255,255,0.08); }
     .why-card-icon { font-size: 1.6rem; flex-shrink: 0; }
-    .why-card-title { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
-    .why-card-text { font-size: 0.875rem; color: var(--gray); line-height: 1.6; }
+    .why-card-title { font-size: 0.95rem; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+    .why-card-text { font-size: 0.865rem; color: rgba(255,255,255,0.68); line-height: 1.65; }
 
     /* REVIEWS */
+    .reviews-bg { background: var(--cream); }
     .reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
     @media (max-width: 768px) { .reviews-grid { grid-template-columns: 1fr; } }
-    .review-card { background: var(--off); border: 1px solid var(--border); border-radius: 10px; padding: 28px; }
-    .review-stars { color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 12px; }
-    .review-text { font-size: 0.925rem; color: var(--gray-d); line-height: 1.7; font-style: italic; margin-bottom: 20px; }
-    .review-author { font-weight: 700; font-size: 0.88rem; color: var(--navy); }
+    .review-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 28px; box-shadow: var(--shadow); position: relative; }
+    .review-card::before { content: '"'; position: absolute; top: 16px; right: 24px; font-family: var(--serif); font-size: 5rem; line-height: 1; color: var(--gold-lt); pointer-events: none; }
+    .review-stars { color: #f5a623; font-size: 1rem; letter-spacing: 2px; margin-bottom: 12px; }
+    .review-text { font-size: 0.925rem; color: var(--gray-d); line-height: 1.75; font-style: italic; margin-bottom: 20px; position: relative; z-index: 1; }
+    .review-author { font-weight: 800; font-size: 0.88rem; color: var(--navy); }
     .review-meta { font-size: 0.78rem; color: var(--gray); margin-top: 2px; }
-    .google-tag { display: inline-flex; align-items: center; gap: 5px; background: #fff; border: 1px solid var(--border); padding: 3px 9px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; color: var(--gray); margin-top: 10px; }
+    .google-tag { display: inline-flex; align-items: center; gap: 5px; background: var(--cream); border: 1px solid var(--border); padding: 3px 9px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; color: var(--gray); margin-top: 10px; }
 
     /* CTA */
-    .cta-section { background: var(--red); color: #fff; padding-block: clamp(48px, 6vw, 72px); text-align: center; }
-    .cta-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.1; margin-bottom: 14px; }
-    .cta-sub { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 32px; }
+    .cta-section { background: var(--navy-d); color: #fff; padding-block: clamp(48px, 7vw, 72px); text-align: center; position: relative; overflow: hidden; }
+    .cta-section::after { content: '⚓'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 9rem; opacity: 0.04; pointer-events: none; }
+    .cta-title { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 900; line-height: 1.15; margin-bottom: 14px; }
+    .cta-title em { font-style: normal; color: var(--gold); }
+    .cta-sub { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 32px; }
     .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
     /* CONTACT */
-    .contact { background: var(--off); }
+    .contact-bg { background: var(--mist); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
     @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
     .c-item { display: flex; align-items: flex-start; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--border); }
     .c-item:last-child { border-bottom: none; }
     .c-icon { width: 42px; height: 42px; background: var(--navy); color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
-    .c-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--gray); margin-bottom: 2px; }
-    .c-value { font-size: 0.95rem; font-weight: 600; color: var(--navy); }
-    .contact-form-box { background: #fff; border-radius: 12px; padding: 36px; box-shadow: var(--shadow); }
-    .cf-title { font-size: 1.2rem; font-weight: 900; color: var(--navy); margin-bottom: 4px; }
+    .c-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--gray); margin-bottom: 3px; }
+    .c-value { font-size: 0.95rem; font-weight: 600; color: var(--navy); line-height: 1.5; }
+    .contact-form-box { background: #fff; border-radius: 12px; padding: 36px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .cf-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 900; color: var(--navy); margin-bottom: 4px; }
     .cf-sub { font-size: 0.83rem; color: var(--gray); margin-bottom: 22px; }
 
     /* FOOTER */
-    .footer { background: var(--navy); color: rgba(255,255,255,0.65); padding-block: 36px; text-align: center; }
-    .footer-name { font-size: 1.3rem; font-weight: 900; color: #fff; margin-bottom: 6px; }
-    .footer-name span { color: #fbbf24; }
-    .footer-div { width: 40px; height: 2px; background: var(--red); margin: 14px auto; }
-    .footer-info { font-size: 0.82rem; line-height: 1.8; }
-    .footer-credit { font-size: 0.72rem; color: rgba(255,255,255,0.22); margin-top: 14px; }
-    .footer-credit a { color: rgba(255,255,255,0.32); }
+    .footer { background: var(--navy-d); color: rgba(255,255,255,0.55); padding-block: 44px; text-align: center; }
+    .footer-anchor { font-size: 2.2rem; margin-bottom: 10px; opacity: 0.6; }
+    .footer-name { font-family: var(--serif); font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 6px; }
+    .footer-name em { font-style: normal; color: var(--gold); }
+    .footer-div { width: 48px; height: 2px; background: var(--gold); margin: 16px auto; border-radius: 2px; }
+    .footer-info { font-size: 0.82rem; line-height: 1.9; }
+    .footer-towns { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-top: 10px; letter-spacing: 0.04em; }
+    .footer-credit { font-size: 0.72rem; color: rgba(255,255,255,0.2); margin-top: 18px; }
+    .footer-credit a { color: rgba(255,255,255,0.32); transition: color 0.2s; }
+    .footer-credit a:hover { color: var(--gold); }
   </style>
 </head>
 <body>
 
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="topbar-item">📍 <span>115 Wareham Rd, Marion, MA 02738</span></div>
-      <div class="topbar-item">⭐ <strong>4.8 Stars on Google</strong> <span>· Lowest Prices on the South Coast</span></div>
+      <div class="topbar-item">📍 <span>115 Wareham Rd, Marion, MA</span></div>
+      <div class="topbar-item">⭐ <strong>4.8 Stars on Google</strong> <span>· Marion's Highest-Rated Plumber</span></div>
       <div class="topbar-item">📞 <strong>(508) 748-2445</strong></div>
     </div>
   </div>
 
   <header class="header">
     <div class="container header-inner">
-      <div>
-        <div class="logo-name">Gibbs <span>Plumbing</span> & Heating</div>
-        <div class="logo-sub">Marion, MA · Licensed & Insured</div>
+      <div class="logo-mark">
+        <div class="logo-anchor">⚓</div>
+        <div>
+          <div class="logo-name">Gibbs <span>Plumbing</span> & Heating</div>
+          <div class="logo-sub">Marion, MA · Licensed & Insured</div>
+        </div>
       </div>
       <nav>
         <ul class="header-nav">
@@ -192,7 +244,7 @@
       <div>
         <div class="header-phone-label">Call Us Today</div>
         <a href="tel:5087482445" class="header-phone-num">(508) 748-2445</a>
-        <div class="rating-pill">⭐ 4.8 · Highest Rated Local Plumber</div>
+        <div class="rating-pill">⭐ 4.8 · Highest Rated in Marion</div>
       </div>
     </div>
   </header>
@@ -201,12 +253,13 @@
     <div class="container">
       <div class="hero-grid">
         <div>
-          <div class="hero-stars">
+          <div class="hero-eyebrow">
+            <div class="hero-tag">Marion, MA · Tri-Town Area</div>
             <span class="hero-stars-val">★★★★★</span>
-            <span class="hero-stars-text">4.8 Stars · Marion's Highest-Rated Plumber</span>
+            <span class="hero-stars-text">4.8 on Google</span>
           </div>
-          <h1 class="hero-headline">Marion's Most<br>Trusted Plumber —<br><span>Best Price, Guaranteed</span></h1>
-          <p class="hero-sub">Gibbs Plumbing & Heating has built a reputation for showing up fast, getting it done right, and consistently beating every competitor on price. Don't call anyone else before you call us.</p>
+          <h1 class="hero-headline">Marion's Most<br>Trusted Plumber —<br><em>Best Price, Guaranteed</em></h1>
+          <p class="hero-sub">Gibbs Plumbing & Heating has been part of this community for years — known for showing up fast, getting it done right, and consistently beating every competitor on price. Don't call anyone else before you call us.</p>
           <div class="hero-btns">
             <a href="tel:5087482445" class="btn btn-red">📞 Call (508) 748-2445</a>
             <a href="#contact" class="btn btn-outline-w">Get a Free Quote</a>
@@ -256,26 +309,46 @@
     </div>
   </section>
 
+  <!-- Wave down from hero -->
+  <div class="wave-down">
+    <svg viewBox="0 0 1440 54" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,28 C240,54 480,4 720,28 C960,52 1200,8 1440,28 L1440,54 L0,54 Z" fill="#b8965a"/>
+    </svg>
+  </div>
+
   <div class="price-promise">
     <div class="container price-promise-inner">
-      💰 <strong>Lowest Price Guarantee</strong> <span>— We beat every competitor. One customer called 3 plumbers and we won by a landslide.</span>
+      ⚓ <strong>Marion's Lowest Price Guarantee</strong> <span>— We beat every competitor. One customer called 3 plumbers and we won by a landslide.</span>
     </div>
   </div>
 
-  <div class="badges">
+  <div class="wave-up">
+    <svg viewBox="0 0 1440 54" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,28 C240,4 480,52 720,28 C960,4 1200,52 1440,28 L1440,0 L0,0 Z" fill="#b8965a"/>
+    </svg>
+  </div>
+
+  <div class="badges" style="background: var(--cream);">
     <div class="container badges-inner">
       <div class="badge"><div class="badge-icon">⭐</div><div class="badge-text">4.8 Stars<span>Google Reviews</span></div></div>
       <div class="badge"><div class="badge-icon">💰</div><div class="badge-text">Best Price<span>Beats All Competitors</span></div></div>
-      <div class="badge"><div class="badge-icon">⚡</div><div class="badge-text">Same-Day Service<span>Fast Response</span></div></div>
+      <div class="badge"><div class="badge-icon">⚡</div><div class="badge-text">Same-Day Service<span>15-Minute Response</span></div></div>
       <div class="badge"><div class="badge-icon">🏅</div><div class="badge-text">Licensed & Insured<span>Massachusetts Certified</span></div></div>
       <div class="badge"><div class="badge-icon">🌿</div><div class="badge-text">MassSave Certified<span>Rebate Assistance</span></div></div>
     </div>
   </div>
 
-  <section class="section-py" id="services">
+  <!-- Wave into services -->
+  <div class="wave-down">
+    <svg viewBox="0 0 1440 50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <section class="services-bg section-py" id="services">
     <div class="container">
       <div class="section-tag">Our Services</div>
-      <h2 class="section-title">Full Plumbing &<br><span>Heating Solutions</span></h2>
+      <h2 class="section-title">Full Plumbing &<br><em>Heating Solutions</em></h2>
       <p class="section-body">One company, every job. From leaking pipes to full heating installs — and we'll help you get every MassSave rebate you're entitled to.</p>
       <div class="services-grid">
         <div class="service-card">
@@ -296,7 +369,7 @@
         <div class="service-card">
           <div class="service-icon">🔥</div>
           <div class="service-name">Heating & Boilers</div>
-          <p class="service-desc">Boiler repair, furnace service, heating system installation. We keep your home warm and your costs down.</p>
+          <p class="service-desc">Boiler repair, furnace service, heating system installation. We keep your home warm and your costs down all winter.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">🚽</div>
@@ -312,13 +385,20 @@
     </div>
   </section>
 
-  <section class="why section-py" id="why">
+  <!-- Wave into Why section (navy) -->
+  <div class="wave-down">
+    <svg viewBox="0 0 1440 54" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,20 C320,54 1120,0 1440,34 L1440,54 L0,54 Z" fill="#1b3d6e"/>
+    </svg>
+  </div>
+
+  <section class="why-bg section-py" id="why">
     <div class="container">
       <div class="why-grid">
-        <div>
-          <div class="section-tag">Why Choose Gibbs</div>
-          <h2 class="section-title">The Plumber<br>That <span>Actually Shows Up</span></h2>
-          <p class="section-body" style="margin-bottom:0">Our customers keep coming back — and keep sending their friends — because we do the simple things right. We answer, we show up, we charge fair prices, and we don't leave until it's done.</p>
+        <div class="why-intro">
+          <div class="section-tag" style="color: var(--gold);">Why Choose Gibbs</div>
+          <h2 class="section-title">The Plumber<br><em>That Actually Shows Up</em></h2>
+          <p class="section-body">Our customers keep coming back — and keep sending their friends and neighbors — because we do the simple things right. We answer, we show up, we charge fair prices, and we don't leave until it's done.</p>
         </div>
         <div class="why-cards">
           <div class="why-card">
@@ -331,22 +411,22 @@
           <div class="why-card">
             <div class="why-card-icon">⚡</div>
             <div>
-              <div class="why-card-title">We Respond Fast</div>
-              <div class="why-card-text">One customer called in a panic and we were at her door in 15 minutes. That's the standard we hold ourselves to.</div>
+              <div class="why-card-title">We Respond in Minutes</div>
+              <div class="why-card-text">One customer called in a panic and we were at her door in 15 minutes ready to help. That's the standard we hold ourselves to.</div>
             </div>
           </div>
           <div class="why-card">
             <div class="why-card-icon">🌿</div>
             <div>
               <div class="why-card-title">MassSave Rebate Experts</div>
-              <div class="why-card-text">We help you navigate the MassSave program so you get every rebate dollar you're entitled to on heating and efficiency projects.</div>
+              <div class="why-card-text">We help you navigate MassSave so you get every rebate dollar you're entitled to on heating and efficiency upgrades.</div>
             </div>
           </div>
           <div class="why-card">
             <div class="why-card-icon">🐾</div>
             <div>
               <div class="why-card-title">We Actually Care</div>
-              <div class="why-card-text">Our team once let a customer's dogs out when they had to go to work mid-install. That's just how we operate.</div>
+              <div class="why-card-text">Our team once let a customer's dogs out when they had to leave mid-install. That's just how we operate — we're your neighbors.</div>
             </div>
           </div>
         </div>
@@ -354,10 +434,17 @@
     </div>
   </section>
 
-  <section class="section-py" id="reviews" style="background:#fff;">
+  <!-- Wave out of navy Why section -->
+  <div class="wave-down">
+    <svg viewBox="0 0 1440 54" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,34 C320,0 1120,54 1440,20 L1440,54 L0,54 Z" fill="#f8f5ef"/>
+    </svg>
+  </div>
+
+  <section class="reviews-bg section-py" id="reviews">
     <div class="container">
-      <div class="section-tag">Google Reviews</div>
-      <h2 class="section-title">⭐ 4.8 Stars — <span>Here's Why</span></h2>
+      <div class="section-tag">What Neighbors Are Saying</div>
+      <h2 class="section-title">⭐ 4.8 Stars — <em>Here's Why</em></h2>
       <div class="reviews-grid">
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
@@ -391,23 +478,37 @@
     </div>
   </section>
 
+  <!-- Wave into dark CTA -->
+  <div class="wave-down">
+    <svg viewBox="0 0 1440 54" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,27 C480,54 960,0 1440,27 L1440,54 L0,54 Z" fill="#122a4e"/>
+    </svg>
+  </div>
+
   <section class="cta-section">
     <div class="container">
-      <h2 class="cta-title">Ready for the Best Price<br>on the South Coast?</h2>
+      <h2 class="cta-title">Ready for Marion's<br><em>Best Price on Plumbing?</em></h2>
       <p class="cta-sub">Call us before you call anyone else. We'll beat their price — and we'll show up faster.</p>
       <div class="cta-btns">
-        <a href="tel:5087482445" class="btn btn-white" style="font-size:1.05rem; padding:16px 36px;">📞 (508) 748-2445</a>
+        <a href="tel:5087482445" class="btn btn-gold" style="font-size:1.05rem; padding:16px 36px;">📞 (508) 748-2445</a>
         <a href="#contact" class="btn btn-outline-w">Request a Quote</a>
       </div>
     </div>
   </section>
 
-  <section class="contact section-py" id="contact">
+  <!-- Wave into contact -->
+  <div class="wave-down">
+    <svg viewBox="0 0 1440 54" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,27 C480,0 960,54 1440,27 L1440,54 L0,54 Z" fill="#edf1f6"/>
+    </svg>
+  </div>
+
+  <section class="contact-bg section-py" id="contact">
     <div class="container">
       <div class="contact-grid">
         <div>
           <div class="section-tag">Contact Us</div>
-          <h2 class="section-title">Get In <span>Touch</span></h2>
+          <h2 class="section-title">Get In <em>Touch</em></h2>
           <p class="section-body" style="margin-bottom:32px;">Call or fill out the form. We respond fast — that's kind of our thing.</p>
           <div class="c-item">
             <div class="c-icon">📞</div>
@@ -423,7 +524,7 @@
           </div>
           <div class="c-item">
             <div class="c-icon">🗺️</div>
-            <div><div class="c-label">Service Area</div><div class="c-value">Marion, Wareham, Mattapoisett, Rochester & South Coast</div></div>
+            <div><div class="c-label">Service Area</div><div class="c-value">Marion · Mattapoisett · Rochester<br>Wareham & the South Coast</div></div>
           </div>
         </div>
         <div class="contact-form-box">
@@ -468,9 +569,11 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-name">Gibbs <span>Plumbing</span> & Heating</div>
+      <div class="footer-anchor">⚓</div>
+      <div class="footer-name">Gibbs <em>Plumbing</em> & Heating</div>
       <div class="footer-div"></div>
-      <div class="footer-info">115 Wareham Rd, Marion, MA 02738 · (508) 748-2445<br>Serving Marion, Wareham, Mattapoisett, Rochester & the South Coast</div>
+      <div class="footer-info">115 Wareham Rd, Marion, MA 02738 · (508) 748-2445</div>
+      <div class="footer-towns">Proudly Serving Marion · Mattapoisett · Rochester · Wareham · The South Coast</div>
       <div class="footer-credit">Website by <a href="#">Harborbuilt Technical Services</a></div>
     </div>
   </footer>
